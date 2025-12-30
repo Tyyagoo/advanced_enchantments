@@ -1,0 +1,135 @@
+{
+	"description": {
+		"translate": "enchantment.advanced_enchantments.life_steal",
+		"fallback": "Life Steal"
+	},
+	"supported_items": "#minecraft:swords",
+	"primary_items": "#minecraft:swords",
+	"weight": 5,
+	"max_level": 3,
+	"min_cost": {
+		"base": 15,
+		"per_level_above_first": 9
+	},
+	"max_cost": {
+		"base": 65,
+		"per_level_above_first": 9
+	},
+	"anvil_cost": 4,
+	"slots": ["mainhand"],
+	"effects": {
+		"minecraft:post_attack": [
+			{
+				"affected": "attacker",
+				"enchanted": "attacker",
+				"effect": {
+					"type": "minecraft:apply_mob_effect",
+					"to_apply": "minecraft:instant_health",
+					"min_duration": 0.05,
+					"max_duration": 0.05,
+					"min_amplifier": 0,
+					"max_amplifier": 0
+				},
+				"requirements": {
+					"condition": "minecraft:all_of",
+					"terms": [
+						{
+							"condition": "minecraft:random_chance",
+							"chance": 0.05
+						},
+						{
+							"condition": "minecraft:entity_properties",
+							"entity": "attacker",
+							"predicate": {
+								"equipment": {
+									"mainhand": {
+										"enchantments": [
+											{
+												"enchantment": "advanced_enchantments:life_steal",
+												"levels": { "min": 1, "max": 1 }
+											}
+										]
+									}
+								}
+							}
+						}
+					]
+				}
+			},
+			{
+				"affected": "attacker",
+				"enchanted": "attacker",
+				"effect": {
+					"type": "minecraft:apply_mob_effect",
+					"to_apply": "minecraft:instant_health",
+					"min_duration": 0.05,
+					"max_duration": 0.05,
+					"min_amplifier": 0,
+					"max_amplifier": 0
+				},
+				"requirements": {
+					"condition": "minecraft:all_of",
+					"terms": [
+						{
+							"condition": "minecraft:random_chance",
+							"chance": 0.1
+						},
+						{
+							"condition": "minecraft:entity_properties",
+							"entity": "attacker",
+							"predicate": {
+								"equipment": {
+									"mainhand": {
+										"enchantments": [
+											{
+												"enchantment": "advanced_enchantments:life_steal",
+												"levels": { "min": 2, "max": 2 }
+											}
+										]
+									}
+								}
+							}
+						}
+					]
+				}
+			},
+			{
+				"affected": "attacker",
+				"enchanted": "attacker",
+				"effect": {
+					"type": "minecraft:apply_mob_effect",
+					"to_apply": "minecraft:instant_health",
+					"min_duration": 0.05,
+					"max_duration": 0.05,
+					"min_amplifier": 0,
+					"max_amplifier": 0
+				},
+				"requirements": {
+					"condition": "minecraft:all_of",
+					"terms": [
+						{
+							"condition": "minecraft:random_chance",
+							"chance": 0.15
+						},
+						{
+							"condition": "minecraft:entity_properties",
+							"entity": "attacker",
+							"predicate": {
+								"equipment": {
+									"mainhand": {
+										"enchantments": [
+											{
+												"enchantment": "advanced_enchantments:life_steal",
+												"levels": { "min": 3, "max": 3 }
+											}
+										]
+									}
+								}
+							}
+						}
+					]
+				}
+			}
+		]
+	}
+}
