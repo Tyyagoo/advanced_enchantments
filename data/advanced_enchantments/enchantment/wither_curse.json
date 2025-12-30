@@ -16,6 +16,7 @@
 		"per_level_above_first": 10
 	},
 	"anvil_cost": 4,
+	"exclusive_set": ["advanced_enchantments:toxic"],
 	"slots": ["mainhand"],
 	"effects": {
 		"minecraft:post_attack": [
