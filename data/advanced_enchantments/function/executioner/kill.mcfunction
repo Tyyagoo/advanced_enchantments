@@ -1,5 +1,5 @@
 # 1. Sound Effect
-playsound minecraft:entity.zombie.break_wooden_door player @p ~ ~ ~ 1.0 0.5
+playsound minecraft:entity.zombie.break_wooden_door player @a ~ ~ ~ 1.0 0.5
 
 # 2. Particle Effects (UPDATED SYNTAX)
 # We use 'dust' with the new component syntax. 
