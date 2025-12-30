@@ -1,7 +1,7 @@
 {
 	"description": {
 		"translate": "enchantment.advanced_enchantments.frostbite",
-		"fallback": "Frostbite"
+		"fallback": "§bFrostbite"
 	},
 	"supported_items": "#minecraft:swords",
 	"primary_items": "#minecraft:swords",
@@ -21,8 +21,6 @@
 	"effects": {
 		"minecraft:post_attack": [
 			{
-				"//": "=== EFFECT 1: SLOWNESS (The 'Frozen Legs') ===",
-				"//": "Fixed at Amplifier 3 (Slowness IV) for maximum stopping power.",
 				"enchanted": "attacker",
 				"affected": "victim",
 				"effect": {
@@ -51,9 +49,6 @@
 				}
 			},
 			{
-				"//": "=== EFFECT 2: MINING FATIGUE (The 'Frozen Arms') ===",
-				"//": "Reduces Attack Speed (DPS) and Digging Speed.",
-				"//": "Scales: Lvl 1->Amp 0, Lvl 3->Amp 2",
 				"enchanted": "attacker",
 				"affected": "victim",
 				"effect": {
