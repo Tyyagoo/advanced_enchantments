@@ -1,7 +1,7 @@
 {
     "description": {
         "translate": "enchantment.advanced_enchantments.executioner",
-        "fallback": "Executioner"
+        "fallback": "§cExecutioner"
     },
     "supported_items": "#minecraft:swords",
     "weight": 10,
