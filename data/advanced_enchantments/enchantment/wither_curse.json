@@ -1,0 +1,64 @@
+{
+	"description": {
+		"translate": "enchantment.advanced_enchantments.wither_curse",
+		"fallback": "§8Wither's Curse 💀"
+	},
+	"supported_items": "minecraft:netherite_sword",
+	"primary_items": "minecraft:netherite_sword",
+	"weight": 2,
+	"max_level": 1,
+	"min_cost": {
+		"base": 10,
+		"per_level_above_first": 10
+	},
+	"max_cost": {
+		"base": 60,
+		"per_level_above_first": 10
+	},
+	"anvil_cost": 4,
+	"slots": ["mainhand"],
+	"effects": {
+		"minecraft:post_attack": [
+			{
+				"enchanted": "attacker",
+				"affected": "victim",
+				"effect": {
+					"type": "minecraft:apply_mob_effect",
+					"to_apply": "minecraft:wither",
+					"min_amplifier": 1,
+					"max_amplifier": 1,
+					"min_duration": {
+						"type": "minecraft:linear",
+						"base": 7.5,
+						"per_level_above_first": 0
+					},
+					"max_duration": {
+						"type": "minecraft:linear",
+						"base": 7.5,
+						"per_level_above_first": 0
+					}
+				}
+			},
+			{
+				"enchanted": "attacker",
+				"affected": "victim",
+				"effect": {
+					"type": "minecraft:apply_mob_effect",
+					"to_apply": "minecraft:blindness",
+					"min_amplifier": 1,
+					"max_amplifier": 1,
+					"min_duration": {
+						"type": "minecraft:linear",
+						"base": 0.5,
+						"per_level_above_first": 0
+					},
+					"max_duration": {
+						"type": "minecraft:linear",
+						"base": 0.5,
+						"per_level_above_first": 0
+					}
+				}
+			}
+		]
+	}
+}
