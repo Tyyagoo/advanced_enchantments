@@ -1,7 +1,7 @@
 {
 	"description": {
 		"translate": "enchantment.advanced_enchantments.weightless",
-		"fallback": "Weightless"
+		"fallback": "§fWeightless"
 	},
 	"supported_items": "#minecraft:swords",
 	"primary_items": "#minecraft:swords",
