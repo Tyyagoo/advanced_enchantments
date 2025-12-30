@@ -3,7 +3,7 @@
     "translate": "enchantment.advanced_enchantments.weightless",
     "fallback": "Weightless"
   },
-  "supported_items": "#advanced_enchantments:weightless_weapons",
+  "supported_items": "#minecraft:swords",
   "primary_items": "#minecraft:swords",
   "weight": 5,
   "max_level": 3,
@@ -22,13 +22,30 @@
   "effects": {
     "minecraft:attributes": [
       {
-        "id": "advanced_enchantments:enchantment/weightless_speed",
+        "//": "Infinite Attack Speed (Instant Cooldown)",
+        "id": "advanced_enchantments:weightless_speed",
         "attribute": "minecraft:attack_speed",
-        "operation": "add_multiplied_total",
-        "amount": {
-          "type": "minecraft:linear",
-          "base": 0.15,
-          "per_level_above_first": 0.15
+        "operation": "add_value",
+        "amount": 100.0
+      }
+    ],
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:damage_entity",
+          "damage_type": "advanced_enchantments:weightless_cut",
+          "min_damage": {
+            "type": "minecraft:linear",
+            "base": 3.0,
+            "per_level_above_first": 1.0
+          },
+          "max_damage": {
+            "type": "minecraft:linear",
+            "base": 3.0,
+            "per_level_above_first": 1.0
+          }
         }
       }
     ]
